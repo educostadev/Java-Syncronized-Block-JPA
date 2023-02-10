@@ -11,13 +11,17 @@ public class MyService {
     @Autowired
     MyRepository repository;
 
-    List<MyEntity> readAll(){
+    final Object lock = new Object();
+
+    List<MyEntity> readAll() {
         return repository.findAll();
     }
 
     public void saveOne() {
-        var maxId = repository.findMax();
-        var entity = MyEntity.create(maxId+1);
-        repository.save(entity);
+        synchronized (lock) {
+            var maxId = repository.findMax();
+            var entity = MyEntity.create(maxId + 1);
+            repository.save(entity);
+        }
     }
 }
