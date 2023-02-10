@@ -1,4 +1,4 @@
-package dev.educosta.masking;
+package dev.educosta.locking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

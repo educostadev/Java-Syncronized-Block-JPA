@@ -1,4 +1,4 @@
-package dev.educosta.masking;
+package dev.educosta.locking;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +22,7 @@ public class Controller {
         ThreadGroup threadGroup = new ThreadGroup("MyThreadGroup");
         Runnable task = new Runnable() {
             public void run() {
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 100; i++) {
                     service.saveOne();
                 }
             }

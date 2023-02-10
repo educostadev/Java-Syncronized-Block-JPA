@@ -1,5 +1,5 @@
 # How to use Java synchronized to lock a block of code for concurrent access
-See [MyService.java](src/main/java/dev/educosta/masking/MyService.java)
+See [MyService.java](src/main/java/dev/educosta/locking/MyService.java)
 ```java
 final Object lock = new Object();
 
@@ -16,7 +16,7 @@ final Object lock = new Object();
 
 Run the application and...
 
-Create 10 Threads and save 10 records each
+Create 10 Threads and save 100 records each
 
 ```bash
 curl --location --request POST 'localhost:8080/create'

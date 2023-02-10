@@ -1,4 +1,4 @@
-package dev.educosta.masking;
+package dev.educosta.locking;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;

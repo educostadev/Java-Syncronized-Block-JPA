@@ -1,4 +1,4 @@
-package dev.educosta.masking;
+package dev.educosta.locking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
