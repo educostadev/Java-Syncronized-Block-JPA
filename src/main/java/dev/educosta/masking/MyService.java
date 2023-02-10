@@ -13,15 +13,15 @@ public class MyService {
 
     final Object lock = new Object();
 
-    List<MyEntity> readAll() {
-        return repository.findAll();
-    }
-
     public void saveOne() {
         synchronized (lock) {
             var maxId = repository.findMax();
             var entity = MyEntity.create(maxId + 1);
             repository.save(entity);
         }
+    }
+
+    List<MyEntity> readAll() {
+        return repository.findAll();
     }
 }
